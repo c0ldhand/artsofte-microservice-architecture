@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace CoreLib.Interfaces.Repositories
 {
-    internal interface IRoleRepository : IRepository<Role>
+    public interface IRoleRepository : IRepository<Role>
     {
-        Task<Role?> GetByName(string name);
+        Task<Role?> GetRoleById(Guid RoleId);
     }
 }

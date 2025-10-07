@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CoreLib.DTO
 {
-    public class AuthResponse
+    public class CreateRoleRequest
     {
-        public string? AccessToken { get; set; }
-        public string? RefreshToken { get; set; }
+        public string? Name { get; set; }
     }
 }
