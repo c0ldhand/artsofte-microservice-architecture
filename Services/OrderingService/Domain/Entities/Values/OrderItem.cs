@@ -1,13 +1,10 @@
 ﻿using Domain.BaseEntity;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Domain.Entities
+namespace Domain.Entities.Values
 {
+    [Table("OrderItem")]
     public class OrderItem : IEntity
     {
         private OrderItem()
@@ -15,11 +12,11 @@ namespace Domain.Entities
         }
 
         [Key]
-        public Guid Id { get; set; }
+        public Guid Id { get;}
         [Required]
-        public Guid ProductId { get; private set; }
+        public Guid ProductId { get; }
         [Required]
-        public int Quantity { get; private set; }
+        public int Quantity { get; }
         [Required]
         public decimal Price { get; private set; }
         public OrderItem(Guid productId, int quantity, decimal price)
@@ -29,9 +26,13 @@ namespace Domain.Entities
             Quantity = quantity;
             Price = price;
         }
-        
 
-        
+        public void UpdatePrice(decimal newPrice)
+        {
+            Price = newPrice;
+        }
+
+
 
     }
 }

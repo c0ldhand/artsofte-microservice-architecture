@@ -21,7 +21,8 @@ namespace Infrastructure.Repositories
             _provider = provider;
         }
         public OrderRepository Order => _provider.GetRequiredService<OrderRepository>();
-        
+        public ProductRepository Product => _provider.GetRequiredService<ProductRepository>();
+
         public async Task SaveAsync(CancellationToken ct = default) => await Context.SaveChangesAsync(ct);
 
         private bool disposed = false;
