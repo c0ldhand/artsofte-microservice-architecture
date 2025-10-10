@@ -1,3 +1,4 @@
+using API;
 using Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<OrderDbContext>(opt =>
 ServiceLifetime.Scoped);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+ConfigureService.Configure(builder.Services);
 
 var app = builder.Build();
 
