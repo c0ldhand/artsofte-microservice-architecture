@@ -14,6 +14,8 @@ namespace Infrastructure
         {
             services.AddScoped(typeof(GenericRepository<>));
             services.AddScoped<OrderRepository>();
+            services.AddScoped<ProductRepository>();
+            services.AddScoped<UnitOfWork>();
         }
     }
 }

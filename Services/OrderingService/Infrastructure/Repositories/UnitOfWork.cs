@@ -15,13 +15,15 @@ namespace Infrastructure.Repositories
         public readonly OrderDbContext Context;
         private readonly IServiceProvider _provider;
 
+        public OrderRepository Order => _provider.GetRequiredService<OrderRepository>();
+        public ProductRepository Product => _provider.GetRequiredService<ProductRepository>();
+
         public UnitOfWork(OrderDbContext context, IServiceProvider provider)
         {
             Context = context;
             _provider = provider;
         }
-        public OrderRepository Order => _provider.GetRequiredService<OrderRepository>();
-        public ProductRepository Product => _provider.GetRequiredService<ProductRepository>();
+        
 
         public async Task SaveAsync(CancellationToken ct = default) => await Context.SaveChangesAsync(ct);
 
