@@ -1,4 +1,5 @@
-﻿using Application.DTO;
+﻿using Application.Clients;
+using Application.DTO;
 using Domain.Entities.Enum;
 using Domain.Entities.Values;
 using Infrastructure.Repositories;
@@ -8,10 +9,12 @@ namespace Application.Services
 {
     public class OrderService
     {
+        private readonly IIdentityClient _identityClient;
         public readonly UnitOfWork _unitOfWork;
-        public OrderService(UnitOfWork unitOfWork) 
+        public OrderService(UnitOfWork unitOfWork, IIdentityClient identityClient) 
         {
             _unitOfWork = unitOfWork;
+            _identityClient = identityClient;
         }
 
         public async Task<Guid> CreateOrder(Guid buyerId, Guid sellerId,
