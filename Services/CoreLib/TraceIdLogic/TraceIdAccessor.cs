@@ -24,7 +24,7 @@ namespace CoreLib.TraceIdLogic
         }
     }
 
-    internal class TraceIdAccessor : ITraceReader, ITraceWriter, ITraceIdAccessor
+    public class TraceIdAccessor : ITraceReader, ITraceWriter, ITraceIdAccessor
     {
         public string Name => "TraceId";
 

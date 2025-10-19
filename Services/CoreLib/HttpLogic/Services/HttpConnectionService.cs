@@ -23,7 +23,7 @@ namespace CoreLib.HttpLogic.Services
         public string? ClientName { get; set; }
     }
 
-    internal class HttpConnectionService : IHttpConnectionService
+    public class HttpConnectionService : IHttpConnectionService
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
