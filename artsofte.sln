@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Services\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Services\OrderingService\Application\Application.csproj", "{CF947084-A17E-4546-BE4F-98C2072A9599}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semaphore", "Services\Semaphore\Semaphore.csproj", "{55258FBD-39A9-4ECF-ADB6-B2311936BF20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{CF947084-A17E-4546-BE4F-98C2072A9599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF947084-A17E-4546-BE4F-98C2072A9599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF947084-A17E-4546-BE4F-98C2072A9599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55258FBD-39A9-4ECF-ADB6-B2311936BF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55258FBD-39A9-4ECF-ADB6-B2311936BF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55258FBD-39A9-4ECF-ADB6-B2311936BF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55258FBD-39A9-4ECF-ADB6-B2311936BF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

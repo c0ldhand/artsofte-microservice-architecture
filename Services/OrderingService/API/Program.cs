@@ -1,4 +1,5 @@
 using API;
+using CoreLib.DistributedSemaphore;
 using Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
@@ -14,6 +15,9 @@ builder.Services.AddDbContext<OrderDbContext>(opt =>
     opt.UseNpgsql(connectionString);
 },
 ServiceLifetime.Scoped);
+
+
+builder.Services.AddRedisDistributedSemaphore(builder.Configuration.GetValue<string>("Redis:Configuration"));
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 ConfigureService.Configure(builder.Services);
